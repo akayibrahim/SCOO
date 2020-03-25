@@ -1,6 +1,6 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.USER_ACTION;
+import com.iakay.scoo.enumeration.USER_ACTION_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,7 +16,7 @@ public class UserLog {
     @Id
     private String userId;
 
-    private USER_ACTION action;
+    private USER_ACTION_TYPE action;
 
     private String description;
 

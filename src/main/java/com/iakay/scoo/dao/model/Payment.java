@@ -1,6 +1,6 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.SUCCESS;
+import com.iakay.scoo.enumeration.SUCCESS_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -22,7 +22,7 @@ public class Payment {
 
     private String ridingId;
 
-    private SUCCESS success;
+    private SUCCESS_TYPE success;
 
     private double price;
 

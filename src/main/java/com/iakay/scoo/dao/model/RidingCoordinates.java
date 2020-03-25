@@ -1,10 +1,11 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.RIDING_STATUS;
+import com.iakay.scoo.enumeration.RIDING_STATUS_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -15,16 +16,14 @@ import java.time.LocalDateTime;
 public class RidingCoordinates {
     @Id
     private String id;
-
+    @NotNull
     private String ridingId;
-
+    @NotNull
     private double latitude;
-
+    @NotNull
     private double longitude;
-
-    private RIDING_STATUS status;
-
-    private double distance;
+    @NotNull
+    private RIDING_STATUS_TYPE status;
 
     private LocalDateTime createTime;
 

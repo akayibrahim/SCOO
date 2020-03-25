@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -14,11 +15,11 @@ import java.time.LocalDateTime;
 public class Feedback {
     @Id
     private String id;
-
+    @NotNull
     private String userId;
-
+    @NotNull
     private String scooterId;
-
+    @NotNull
     private String ridingId;
 
     private int score;

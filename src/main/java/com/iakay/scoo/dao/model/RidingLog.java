@@ -1,10 +1,11 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.RIDING_LOG;
+import com.iakay.scoo.enumeration.RIDING_LOG_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -15,9 +16,9 @@ import java.time.LocalDateTime;
 public class RidingLog {
     @Id
     private String ridingId;
-
-    private RIDING_LOG action;
-
+    @NotNull
+    private RIDING_LOG_TYPE action;
+    @NotNull
     private String description;
 
     private LocalDateTime createTime;

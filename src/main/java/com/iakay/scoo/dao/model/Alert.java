@@ -1,10 +1,11 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.ALERT;
+import com.iakay.scoo.enumeration.ALERT_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -15,11 +16,13 @@ import java.time.LocalDateTime;
 public class Alert {
     @Id
     private String id;
+    @NotNull
     private String userId;
+    @NotNull
     private String scooterId;
     private String ridingId;
     private String problemId;
-    private ALERT type;
+    private ALERT_TYPE type;
     private String detail;
     private LocalDateTime createTime;
 }

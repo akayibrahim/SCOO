@@ -16,6 +16,8 @@ import java.util.Optional;
 public interface ScooterRepository extends MongoRepository<Scooter, String> {
     Optional<Scooter> findById(String id);
 
+    Optional<Scooter> findByLabel(String id);
+
     Scooter save(Scooter scooter);
 
     void deleteById(String id);

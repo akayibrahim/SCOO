@@ -1,10 +1,11 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.LOCK_STATUS;
+import com.iakay.scoo.enumeration.LOCK_STATUS_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -15,12 +16,10 @@ import java.time.LocalDateTime;
 public class Riding {
     @Id
     private String id;
-
+    @NotNull
     private String userId;
-
+    @NotNull
     private String scooterId;
-
-    private String coordinateId;
 
     private LocalDateTime startDateTime;
 
@@ -34,6 +33,5 @@ public class Riding {
 
     private String pictureId;
 
-    private LOCK_STATUS lockStatus;
-
+    private LOCK_STATUS_TYPE lockStatus;
 }

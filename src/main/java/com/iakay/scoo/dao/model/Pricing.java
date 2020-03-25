@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -14,11 +15,11 @@ import java.time.LocalDateTime;
 public class Pricing {
     @Id
     private String id;
-
+    @NotNull
     private double priceOfStart;
-
+    @NotNull
     private double priceOfMinute;
-
+    @NotNull
     private int taxRatio;
 
     private LocalDateTime createTime;

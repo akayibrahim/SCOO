@@ -1,6 +1,6 @@
 package com.iakay.scoo.dao.model;
 
-import com.iakay.scoo.enumeration.PICTURE_REASON;
+import com.iakay.scoo.enumeration.PICTURE_REASON_TYPE;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -20,8 +20,9 @@ public class Picture {
 
     private String problemId;
 
-    private PICTURE_REASON reason;
+    private PICTURE_REASON_TYPE reason;
 
     private LocalDateTime createTime;
 
+    private String pictureGridFsId;
 }

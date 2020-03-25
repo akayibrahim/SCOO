@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -15,11 +16,11 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private String id;
-
+    @NotNull
     private String email;
-
+    @NotNull
     private String firstName;
-
+    @NotNull
     private String lastName;
 
     private String phoneNumber;
@@ -32,4 +33,5 @@ public class User {
 
     private LocalDateTime createTime;
 
+    private UserLog userLog1;
 }
